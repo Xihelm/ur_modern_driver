@@ -92,8 +92,8 @@ int main(int argc, char **argv)
   std::transform (args.joint_names.begin(), args.joint_names.end(), args.joint_names.begin(),
         [&args](std::string name){return args.prefix + name;});
 
-  std::string local_ip(getLocalIPAccessibleFromHost(args.host));
-
+  //std::string local_ip(getLocalIPAccessibleFromHost(args.host));
+  std::string local_ip = std::getenv("HOST_IP"); // this line ensures that the correct host ip gets captured
   URFactory factory(args.host);
   vector<Service *> services;
 

@@ -15,7 +15,7 @@
   <arg name="servoj_time" default="0.008" />
   <arg name="base_frame" default="$(arg prefix)base" />
   <arg name="tool_frame" default="$(arg prefix)tool0_controller" />
-
+  <arg name="shutdown_on_disconnect"/> 
   <!-- require_activation defines when the service /ur_driver/robot_enable needs to be called. -->
   <arg name="require_activation" default="Never" /> <!-- Never, Always, OnStartup -->
     
